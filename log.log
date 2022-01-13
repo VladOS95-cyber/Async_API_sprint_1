@@ -1,0 +1,88 @@
+2021-12-30 00:26:26,159 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:26,276 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:26,505 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:26,932 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:27,765 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:29,397 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:32,625 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:55,420 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:55,556 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:55,789 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:56,216 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:57,050 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:26:58,683 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:27:01,911 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:32,827 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:32,965 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:33,199 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:33,628 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:34,464 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:28:36,084 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:29:14,400 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
+2021-12-30 00:33:43,939 - [ERROR]     - Utils.backoff - (backoff.py).inner(21) - invalid input syntax for type timestamp with time zone: "None"
+LINE 4:         WHERE updated_at > 'None';
+                                   ^
+
