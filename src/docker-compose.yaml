@@ -4,10 +4,9 @@ services:
     container_name: app
     build:
       context: .
-    ports:
-      - "8070:8070"
     networks:
       - movies_admin_movie_net
+    command: "uvicorn main:app --reload --host 0.0.0.0"
     volumes:
       - fast_api:/app/data
     depends_on:

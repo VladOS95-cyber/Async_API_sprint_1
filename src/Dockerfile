@@ -1,5 +1,7 @@
 FROM python:3.9
 
+EXPOSE 8000
+
 WORKDIR /app
 
 COPY requirements.txt /app
@@ -9,4 +11,4 @@ RUN pip3 install --upgrade pip && \
 
 COPY . /app
 
-CMD ["python3", "main.py"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0"]
