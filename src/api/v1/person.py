@@ -1,20 +1,44 @@
 from http import HTTPStatus
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Request
 
-from models.person import ReponcePersonDetailed, ResponcePersons
-
+from models.person import ReponcePersonDetailed
 from services.person import PersonService, get_person_service
+from services.utils import get_params
 
 router = APIRouter()
 
 
-@router.get("/all", response_model=ResponcePersons)
-async def person(
-    person_service: PersonService = Depends(get_person_service),
-) -> ResponcePersons:
-    persons = await person_service.get_all_persons()
-    return persons
+@router.get(
+    "/search",
+    response_model=list[ReponcePersonDetailed],
+    summary="List of suitable person",
+    description="List of persons with full_name, roles and film_ids",
+    response_description="List of persons with id",
+)
+@router.get(
+    "",
+    response_model=list[ReponcePersonDetailed],
+    summary="List of person",
+    description="List of persons with full_name, roles and film_ids",
+    response_description="List of persons with id",
+)
+async def persons_list(
+    request: Request, person_service: PersonService = Depends(get_person_service)
+) -> list[ReponcePersonDetailed]:
+    params = get_params(request)
+    person_list = await person_service.get_by_params(**params)
+    if not person_list:
+        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail="PERSON_NOT_FOUND")
+    return [
+        ReponcePersonDetailed(
+            id=person.id,
+            full_name=person.full_name,
+            roles=person.roles,
+            films=person.films,
+        )
+        for person in person_list
+    ]
 
 
 @router.get("/{person_id}", response_model=ReponcePersonDetailed)

@@ -1,30 +1,19 @@
 from typing import List, Union
 
-import orjson
-from pydantic import BaseModel
+from models.base import BaseOrjsonModel
 
 
-def orjson_dumps(v, *, default):
-    return orjson.dumps(v, default=default).decode()
-
-
-class BaseOrjsonModel(BaseModel): 
-      class Config: 
-            json_loads = orjson.loads 
-            json_dumps = orjson_dumps
-
-
-class Person(BaseOrjsonModel):
+class PersonShortResponseForFilm(BaseOrjsonModel):
     id: str
     name: str
 
 
-class InfoFilm(BaseOrjsonModel):
+class FilmShortResponse(BaseOrjsonModel):
     id: str
     title: str
 
 
-class Film(BaseOrjsonModel):
+class FilmDetailed(BaseOrjsonModel):
     id: str
     imdb_rating: Union[float, None] = 0.0
     genre: List[str] = []
@@ -33,13 +22,8 @@ class Film(BaseOrjsonModel):
     director: Union[str, None] = ""
     actors_names: List[str] = []
     writers_names: List[str] = []
-    actors: List[Person] = []
-    writers: List[Person] = []
-
-
-
-class Films(BaseOrjsonModel):
-    films: List[Film] = []
+    actors: List[PersonShortResponseForFilm] = []
+    writers: List[PersonShortResponseForFilm] = []
 
 
 class ResponceFilm(BaseOrjsonModel):
@@ -51,7 +35,3 @@ class ResponceFilm(BaseOrjsonModel):
     director: Union[str, None] = ""
     actors_names: List[str] = []
     writers_names: List[str] = []
-
-
-class ResponceFilms(BaseOrjsonModel):
-    films: List[Film] = []

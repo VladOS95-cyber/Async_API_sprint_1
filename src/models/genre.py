@@ -1,38 +1,24 @@
 from typing import List, Union
 
-import orjson
-from pydantic import BaseModel
-
-from models.person import InfoFilm
+from models.base import BaseOrjsonModel
+from models.film import FilmShortResponse
 
 
-def orjson_dumps(v, *, default):
-    return orjson.dumps(v, default=default).decode()
-
-
-class BaseOrjsonModel(BaseModel): 
-      class Config: 
-            json_loads = orjson.loads 
-            json_dumps = orjson_dumps
+class GenreShortResponse(BaseOrjsonModel):
+    id: str
+    name: str
+    description: Union[str, None] = ""
 
 
 class GenreDetailed(BaseOrjsonModel):
     id: str
     name: str
     description: Union[str, None] = ""
-    films: List[InfoFilm] = []
-
-
-class Genres(BaseOrjsonModel):
-    genres: List[GenreDetailed] = []
+    films: List[FilmShortResponse] = []
 
 
 class ResponceGenreDetailed(BaseOrjsonModel):
     id: str
     name: str
     description: Union[str, None] = ""
-    films: List[InfoFilm] = []
-
-
-class ResponceGenres(BaseOrjsonModel):
-    genres: List[GenreDetailed] = []
+    films: List[FilmShortResponse] = []

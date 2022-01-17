@@ -6,6 +6,8 @@ services:
       context: .
     networks:
       - movies_admin_movie_net
+    env_file:
+      .env.sample
     command: "uvicorn main:app --reload --host 0.0.0.0"
     volumes:
       - fast_api:/app/data
