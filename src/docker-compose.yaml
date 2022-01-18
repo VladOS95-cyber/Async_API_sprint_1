@@ -1,0 +1,46 @@
+services:
+
+  app:
+    container_name: app
+    build:
+      context: .
+    ports:
+      - "8070:8070"
+    networks:
+      - movies_admin_movie_net
+    volumes:
+      - fast_api:/app/data
+    depends_on:
+      - redis
+      - es
+  
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.1
+    container_name: elastic
+    ports:
+      - "9200:9200"
+    networks:
+      - movies_admin_movie_net
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - elasticdata:/app/elasticsearch/data
+  
+  redis:
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - movies_admin_movie_net
+    image: redis:6.2.6
+    volumes:
+      - redisdata:/app/redis/data
+  
+networks:
+  movies_admin_movie_net:
+    external: true
+
+volumes:
+  fast_api:
+  elasticdata:
+  redisdata:
